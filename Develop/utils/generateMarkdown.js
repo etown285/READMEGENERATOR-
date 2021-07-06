@@ -31,14 +31,14 @@ function renderLicenseLink(license) {
 //     return `(https://github.com/git/git-scm.com/blob/main/MIT-LICENSE.txt)`
 //   } else {
 //     return ""
-//   }
+//  }
 
 // refactored to use switch
   switch(license) {
     case 'apache-2.0':
       return `(https://www.apache.org/licenses/LICENSE-2.0)`;
       break;
-    case 'BSD 3-Clause "New" or "Revised':
+    case 'BSD 3-Clause "New" or "Revised"':
       return `(https://choosealicense.com/licenses/bsd-3-clause/)`;
       break;
     case 'GNU General Public License v3.0':
@@ -65,9 +65,11 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
+  console.log(data);
+
   return `# ${data.title}
-  ${renderLicenseBadge(data.license)};
-  ${renderLicenseLink(data.license)};
+  ${renderLicenseBadge(data.license)}
+
   ## Description
   ${data.description}
   ## Table of Contents
@@ -96,9 +98,10 @@ function generateMarkdown(data) {
   ## Questions
   [![GitHub](https://img.shields.io/badge/Github-Click%20Here-orange)](https://github.com/${data.username}) 
   [![LinkedIn](https://img.shields.io/badge/LinkedIn-Click%20Here-yellowgreen)](https://www.linkedin.com/in/stevenjamespaul/)
-  You may contact me via email ($[data.email]) with any questions regarding this project or anything else you see!
+  You may contact me via email (${data.email}) with any questions regarding this project or anything else you see!
   <a name="license"></a>
   ## License
+  ${renderLicenseLink(data.license)}
 `;
 }
 
