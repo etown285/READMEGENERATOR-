@@ -15,7 +15,7 @@
   
   <a name="usage"></a>
   ## Usage
-  ![Screenshot]
+  ![Screenshot](https://github.com/etown285/READMEGENERATOR-/blob/main/Develop/GOODREADMEGENERATOR.gif)
   
   ## Links
   * Live/Deployed Application: (https://etown285.github.io/GOODREADMEGENERATOR-/)
